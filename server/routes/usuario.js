@@ -1,9 +1,9 @@
 const express = require('express');
+const bcrypt = require('bcrypt');
 const app = express();
 const Usuario = require('../models/usuario');
 
 
-const bcrypt = require('bcrypt');
 const _ = require('underscore');
 
 app.get('/usuario', function(req, res) {
@@ -27,7 +27,7 @@ app.get('/usuario', function(req, res) {
                     err
                 });
             }
-            Usuario.count({ estado: true }, (err, conteo) => {
+            Usuario.countDocuments({ estado: true }, (err, conteo) => {
                 res.json({
                     ok: true,
                     usuarios,
