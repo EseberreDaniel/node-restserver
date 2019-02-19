@@ -9,7 +9,7 @@ process.env.PORT = process.env.PORT || 3000;
 //=====
 //Vencimiento del Token
 //======
-process.env.CADUCIDAD_TOKEN = 60 * 60 * 24 * 10;
+process.env.CADUCIDAD_TOKEN = '24h';
 
 
 
