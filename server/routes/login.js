@@ -5,7 +5,7 @@ const app = express();
 const Usuario = require('../models/usuario');
 
 
-app.post('/loginPrueba', (req, res) => {
+app.post('/login', (req, res) => {
 
     let body = req.body;
     Usuario.findOne({ email: body.email }, (err, usuarioDB) => {
